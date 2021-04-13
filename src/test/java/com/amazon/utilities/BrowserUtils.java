@@ -375,6 +375,4 @@ public class BrowserUtils {
         new WebDriverWait(com.amazon.utilities.Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-
-
 }
