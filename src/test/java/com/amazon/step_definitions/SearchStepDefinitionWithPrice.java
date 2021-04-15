@@ -32,21 +32,12 @@ public class SearchStepDefinitionWithPrice {
         List<String> priceLists = new ArrayList<>();
         boolean flag=true;
 
-//        while(flag){
-//
-//            priceLists = BrowserUtils.getElementsText(new SearchPage().productPrices);
-//
-//            if (new SearchPage().nextButton.isEnabled()){
-//                new SearchPage().nextButton.click();
-//            }else{
-//                flag=false;
-//                break;
-//            }
-//        }
-
         do {
             priceLists = BrowserUtils.getElementsText(new SearchPage().productPrices);
-            if (new SearchPage().nextButton.isDisplayed() || new SearchPage().nextButton.isEnabled()){
+//            System.out.println("priceLists = " + priceLists);
+            String nextButtonAtt = new SearchPage().nextButton.getAttribute("class");
+//            System.out.println("nextButtonAtt = " + nextButtonAtt);
+            if (!nextButtonAtt.contains("disabled")){
                 new SearchPage().nextButton.click();
             }else{
                 flag=false;
@@ -59,11 +50,7 @@ public class SearchStepDefinitionWithPrice {
             prices.add(Integer.parseInt(priceLists.get(i)));
         }
 
-        int k=1;
-        for (Integer price : prices) {
-            System.out.println("price "+k+" = " + price);
-            k++;
-        }
+        System.out.println("prices = " + prices);
 
     }
 }

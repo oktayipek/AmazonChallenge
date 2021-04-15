@@ -1,33 +1,29 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/search.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/miroLogin.feature");
 formatter.feature({
-  "name": "Users should be able to search",
+  "name": "Users should be able to login",
   "description": "",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "name": "Search with price",
-  "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Feature",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@miroLogin"
     }
   ]
 });
+formatter.scenarioOutline({
+  "name": "Login",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
 formatter.step({
-  "name": "the user is on the home page",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "the user should be able to enter \"\u003csearchText\u003e\" and search",
+  "name": "the user enters \"\u003cemail\u003e\" and \"\u003cpassword\u003e\" information",
   "keyword": "When "
 });
 formatter.step({
-  "name": "the user should be able to choose \"\u003cmin\u003e\" and \"\u003cmax\u003e\" price",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "the user should see \u003cmin\u003e price and \u003cmax\u003e price",
+  "name": "the user should be on Miro service page",
   "keyword": "Then "
 });
 formatter.examples({
@@ -37,67 +33,60 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "searchText",
-        "min",
-        "max"
+        "email",
+        "password"
       ]
     },
     {
       "cells": [
-        "macbook pro laptop",
-        "500",
-        "600"
+        "miro@hotmail.com",
+        "1234"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Search with price",
+  "name": "Login",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@miroLogin"
     }
   ]
 });
 formatter.before({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "the user is on the home page",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.amazon.step_definitions.SearchStepDefinition.the_user_is_on_the_home_page()"
+  "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_is_on_the_login_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "the user should be able to enter \"macbook pro laptop\" and search",
+  "name": "the user enters \"miro@hotmail.com\" and \"1234\" information",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.amazon.step_definitions.SearchStepDefinitionWithPrice.the_user_should_be_able_to_enter_and_search(java.lang.String)"
+  "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_enters_and_information(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "the user should be able to choose \"500\" and \"600\" price",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.amazon.step_definitions.SearchStepDefinitionWithPrice.the_user_should_be_able_to_choose_and_price(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user should see 500 price and 600 price",
+  "name": "the user should be on Miro service page",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.amazon.step_definitions.SearchStepDefinitionWithPrice.the_user_should_see_price_and_price(java.lang.Integer,java.lang.Integer)"
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "status": "skipped"
+});
 });
