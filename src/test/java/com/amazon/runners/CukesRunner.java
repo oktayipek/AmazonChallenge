@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "com/amazon/step_definitions",
-        dryRun = true,
-        tags = "@Login"
+        dryRun = false,
+        tags = "@miroLogin"
 )
 public class CukesRunner {
 }
