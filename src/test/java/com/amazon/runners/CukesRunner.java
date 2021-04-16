@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/amazon/step_definitions",
         dryRun = true,
-        tags = "@miroLogin"
+        tags = "@Login"
 )
 public class CukesRunner {
 }
