@@ -17,7 +17,7 @@ public class miroLoginPage {
     public WebElement miroPassword;
 
     @FindBy(xpath = ("//button[@data-autotest-id='mr-form-login-btn-signin-1']"))
-    public WebElement miroSignuInButton;
+    public WebElement miroSignInButton;
 
     @FindBy(xpath = "(//a[@data-autotest-id='mr-link-forgot-password-1'])")
     public WebElement miroForgetButton;
@@ -25,4 +25,15 @@ public class miroLoginPage {
     @FindBy(xpath = "(//a[@data-autotest-id='mr-link-signin-with-sso-1'])")
     public WebElement singInWithSSOButton;
 
+    public void LoginWithoutSSO(String work_email, String password){
+        miroWorkEmail.sendKeys(work_email);
+        miroPassword.sendKeys(password);
+        miroSignInButton.click();
+    }
+
+    public void LoginWithSSO(String email, String password){
+        singInWithSSOButton.click();
+        miroWorkEmail.sendKeys(email);
+        miroSignInButton.click();
+    }
 }

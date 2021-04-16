@@ -15,15 +15,15 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "the user is on the login page",
+  "name": "the user is on the Miro login page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "the user enters \"\u003cemail\u003e\" and \"\u003cpassword\u003e\" information",
+  "name": "the Miro user enters \"\u003cwork_email\u003e\" and \"\u003cpassword\u003e\" information",
   "keyword": "When "
 });
 formatter.step({
-  "name": "the user should be on Miro service page",
+  "name": "the user should be on \"\u003cpage_title\u003e\" page",
   "keyword": "Then "
 });
 formatter.examples({
@@ -33,14 +33,16 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "email",
-        "password"
+        "work_email",
+        "password",
+        "page_title"
       ]
     },
     {
       "cells": [
-        "miro@hotmail.com",
-        "1234"
+        "game_dante@hotmail.com",
+        "eagle_4311",
+        "Online Whiteboard for Visual Collaboration"
       ]
     }
   ]
@@ -56,37 +58,39 @@ formatter.scenario({
   ]
 });
 formatter.before({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user is on the login page",
+  "name": "the user is on the Miro login page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_is_on_the_login_page()"
+  "location": "com.amazon.step_definitions.miroLoginStepDef.the_user_is_on_the_Miro_login_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user enters \"miro@hotmail.com\" and \"1234\" information",
+  "name": "the Miro user enters \"game_dante@hotmail.com\" and \"eagle_4311\" information",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_enters_and_information(java.lang.String,java.lang.String)"
+  "location": "com.amazon.step_definitions.miroLoginStepDef.the_Miro_user_enters_and_information(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user should be on Miro service page",
+  "name": "the user should be on \"Online Whiteboard for Visual Collaboration\" page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.amazon.step_definitions.miroLoginStepDef.the_user_should_be_on_page(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
 });

@@ -3,11 +3,12 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-04-15T18:09:43.491Z",
+        "start_timestamp": "2021-04-16T12:32:44.071Z",
         "before": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 1899257800,
+              "status": "passed"
             },
             "match": {
               "location": "com.amazon.step_definitions.Hooks.setUp()"
@@ -21,7 +22,8 @@
         "after": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 688101700,
+              "status": "passed"
             },
             "match": {
               "location": "com.amazon.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -33,43 +35,54 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 3969733300,
+              "status": "passed"
             },
             "line": 5,
-            "name": "the user is on the login page",
+            "name": "the user is on the Miro login page",
             "match": {
-              "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_is_on_the_login_page()"
+              "location": "com.amazon.step_definitions.miroLoginStepDef.the_user_is_on_the_Miro_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4166719200,
+              "status": "passed"
             },
             "line": 6,
-            "name": "the user enters \"miro@hotmail.com\" and \"1234\" information",
+            "name": "the Miro user enters \"game_dante@hotmail.com\" and \"eagle_4311\" information",
             "match": {
               "arguments": [
                 {
-                  "val": "\"miro@hotmail.com\"",
-                  "offset": 16
+                  "val": "\"game_dante@hotmail.com\"",
+                  "offset": 21
                 },
                 {
-                  "val": "\"1234\"",
-                  "offset": 39
+                  "val": "\"eagle_4311\"",
+                  "offset": 50
                 }
               ],
-              "location": "com.amazon.step_definitions.LoginStepDefinition.the_user_enters_and_information(java.lang.String,java.lang.String)"
+              "location": "com.amazon.step_definitions.miroLoginStepDef.the_Miro_user_enters_and_information(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 49976900,
+              "status": "passed"
             },
             "line": 7,
-            "name": "the user should be on Miro service page",
-            "match": {},
+            "name": "the user should be on \"Online Whiteboard for Visual Collaboration\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Online Whiteboard for Visual Collaboration\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.amazon.step_definitions.miroLoginStepDef.the_user_should_be_on_page(java.lang.String)"
+            },
             "keyword": "Then "
           }
         ],
